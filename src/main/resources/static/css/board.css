@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+/*공통*/
+
+* {
+	box-sizing: border-box;
+}
+
+#board-section {
+	width: 720px;
+	margin: 60px auto;
+	border: 5px double black;
+}
+
+#board-bottom {
+	width: 600px;
+	margin: 20px auto;
+	text-align: right;
+}
+
+/*list.jsp*/
+#pagination {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.row {
+	display: flex;
+	border-bottom: 1px solid black;
+}
+
+#write-button {
+	margin-top: 10px;
+}
+
+.cell {
+	margin-bottom: 5px;
+	text-align: center;
+	white-space: nowrap; /* 텍스트를 한 줄에 표시 */
+	overflow: hidden; /* 오버플로우된 내용을 잘라냄 */
+	text-overflow: ellipsis; /* 잘라낸 텍스트를 '...'으로 대체 */
+}
+
+.cell:nth-child(2) {
+	text-align: left;
+}
+
+/*번호*/
+.cell:nth-child(1) {
+	flex: 1;
+}
+
+/*제목*/
+.cell:nth-child(2) {
+	flex: 3;
+}
+
+/*작성자*/
+.cell:nth-child(3) {
+	flex: 2;
+}
+
+/*작성일*/
+.cell:nth-child(4) {
+	flex: 2;
+}
+
+/*조회수*/
+.cell:nth-child(5) {
+	flex: 2;
+}
+
+/*write.jsp*/
+
+#post-write {
+	width: 600px;
+	margin: 20px auto;
+}
+
+#title {
+	width: 100%;
+}
+
+#content {
+	resize: none;
+	margin-top: 2px;
+	width: 100%;
+	height: 300px;
+}
+
+/*read.jsp*/
+
+#row-comment {
+	display: flex;
+	text-align: center;
+	border-top: 1px solid black;
+}
+
+.cell-comment:nth-child(1) {
+	flex: 1; /*작성자*/
+}
+
+.cell-comment:nth-child(2) {
+	text-align: left;
+	flex: 5; /*내용*/
+}
+
+.cell-comment:nth-child(3) {
+	flex: 1; /*작성일*/
+}
+
+#comment-label {
+	text-align: center;
+	font-weight: bold;
+}
+
+#comment-write {
+	display: flex;
+	flex-direction: column;
+	margin: 5px auto;
+}
+
+#comment-write-top {
+	display: flex;
+}
+
+#comment-write-bottom {
+	text-align: right;
+}
+
+#comment-write-box1 {
+	width: 150px;
+}
+
+#comment-write-box1 input {
+	display: block;
+}
+
+#comment-author {
+	width: 150px;
+}
+
+#comment-write-content {
+	resize: none;
+	flex-grow: 1;
+}
+
+#comment-submit-button {
+	width: 50px;
+}
+
+#post-read .read-row {
+	display: flex;
+}
+
+#post-read .column {
+	flex: 2;
+	text-align: center;
+	font-weight: bold;
+}
+
+#post-read .content {
+	flex: 8;
+}
+
+#read-space {
+	border: 1px dotted black;
+}
+
+/* checkPassword-section.jsp */
+
+#checkPassword-section {
+	width: 360px;
+	height: 300px;
+	margin: 150px auto;
+	border: 5px double black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#password-box {
+	width: 260px;
+	display: block;
+}
+
+#checkPassword-button {
+	margin-top: 20px;
+}
